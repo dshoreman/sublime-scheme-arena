@@ -1,18 +1,18 @@
 [
     {
-        "caption": "SchemeCycler : Next Color Scheme",
+        "caption": "SchemeArena : Next Color Scheme",
         "command": "next_color_scheme"
     },
     {
-        "caption": "SchemeCycler : Previous Color Scheme",
+        "caption": "SchemeArena : Previous Color Scheme",
         "command": "previous_color_scheme"
     },
     {
-        "caption": "SchemeCycler : Delete then Next Color Scheme",
+        "caption": "SchemeArena : Delete then Next Color Scheme",
         "command": "delete_then_next_color_scheme"
     },
     {
-        "caption": "SchemeCycler : Delete then Previous Color Scheme",
+        "caption": "SchemeArena : Delete then Previous Color Scheme",
         "command": "delete_then_previous_color_scheme"
     }
 ]
