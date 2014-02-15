@@ -1,11 +1,13 @@
 # SchemeCycler
 
 This package for Sublime Text 2 lets you cycle through all available colour schemes with ease.
-If you're using Dayle Rees' Colour Schemes (or any other large collection for that matter), you'd
-be forgiven for being slightly overwhelmed by the sheer number of themes available. That's why
-this package has the ability to delete the current scheme as you're cycling through them.
+If you're using [Dayle Rees' Colour Schemes](https://github.com/daylerees/colour-schemes)
+(or any other large collection for that matter), you'd be forgiven for being slightly overwhelmed
+by the sheer number of themes available. That's why this package has the ability to delete the
+current scheme as you're cycling through them.
 
-_Too bright? Too dark? Too pink?_ Delete it, at the touch of a button!
+_Too dark? Too bright? Too pink? Delete it!_ At the touch of a button.
+
 Eventually you'll be left with a small(er) set of schemes, all of which you like. Win!
 
 
