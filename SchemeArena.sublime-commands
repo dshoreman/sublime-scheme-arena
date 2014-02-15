@@ -1,0 +1,18 @@
+[
+    {
+        "caption": "SchemeArena : Next Color Scheme",
+        "command": "next_color_scheme"
+    },
+    {
+        "caption": "SchemeArena : Previous Color Scheme",
+        "command": "previous_color_scheme"
+    },
+    {
+        "caption": "SchemeArena : Delete then Next Color Scheme",
+        "command": "delete_then_next_color_scheme"
+    },
+    {
+        "caption": "SchemeArena : Delete then Previous Color Scheme",
+        "command": "delete_then_previous_color_scheme"
+    }
+]
