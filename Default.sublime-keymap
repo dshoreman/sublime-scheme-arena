@@ -1,4 +1,0 @@
-[
-	{"keys": ["f8"], "command": "next_color_scheme"},
-	{"keys": ["shift+f8"], "command": "previous_color_scheme"}
-]
