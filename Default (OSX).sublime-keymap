@@ -1,4 +1,6 @@
 [
-	{"keys": ["f8"], "command": "next_color_scheme"},
-	{"keys": ["shift+f8"], "command": "previous_color_scheme"}
+	{"keys": ["super+pagedown"], "command": "next_color_scheme"},
+	{"keys": ["super+pageup"], "command": "previous_color_scheme"},
+	{"keys": ["super+alt+pagedown"], "command": "delete_then_next_color_scheme"},
+	{"keys": ["super+alt+pageup"], "command": "delete_then_previous_color_scheme"}
 ]
