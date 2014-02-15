@@ -22,7 +22,7 @@ def fix_path(path):
     return path.replace('\\', '/')
 
 
-def cycle_scheme(backward=False):
+def cycle_scheme(backward=False, purge=False):
     package_path = fix_path(sublime.packages_path())
 
     schemes = ['/'.join([
@@ -44,6 +44,7 @@ def cycle_scheme(backward=False):
     scheme = schemes[scheme_index]
     if not scheme:
         return
+
     settings.set('color_scheme', scheme)
     sublime.save_settings('Preferences.sublime-settings')
 
@@ -51,12 +52,35 @@ def cycle_scheme(backward=False):
         u'Color Scheme: ' + splitext(basename(scheme).decode('utf-8'))[0]
     )
 
+    if purge:
+        if sublime.ok_cancel_dialog('Are you sure you want to delete "'+basename(current_scheme)+'"?'):
+            purge_scheme(scheme=current_scheme)
+        else:
+            sublime.status_message('Theme not removed, user cancelled operation')
+
+def purge_scheme(scheme):
+    scheme_path = sublime.packages_path().rstrip('Packages')+scheme
+    scheme = basename(scheme)
+
+    try:
+        os.remove(scheme_path)
+        sublime.status_message('Deleted '+scheme)
+    except:
+        sublime.status_message('Could not delete '+scheme_path)
+
 
 class NextColorSchemeCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         cycle_scheme()
 
+class DeleteThenNextColorSchemeCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        cycle_scheme(backward=False, purge=True)
 
 class PreviousColorSchemeCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         cycle_scheme(backward=True)
+
+class DeleteThenPreviousColorSchemeCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        cycle_scheme(backward=True, purge=True)
